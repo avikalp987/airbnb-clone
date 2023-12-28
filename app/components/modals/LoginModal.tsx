@@ -101,7 +101,7 @@ const LoginModal = () => {
             <div className="text-netral-500 text-center mt-4 font-light">
                 <div className="flex flex-row items-center gap-2 justify-center">
                     <div>
-                        New to Airbnb?
+                        First time using Airbnb?
                     </div>
 
                     <div 
@@ -110,7 +110,7 @@ const LoginModal = () => {
                             registerModal.onOpen()
                         }}
                         className="text-neutral-800 cursor-pointer hover:underline">
-                        Register
+                        Create an account
                     </div>
                 </div>
             </div>
