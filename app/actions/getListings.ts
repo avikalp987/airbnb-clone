@@ -12,8 +12,14 @@ export default async function getListings() {
             }
         })
 
-        //returning all the listings
-        return listings
+        //converting the listings into safe listings
+        const safeListings = listings.map((listing) => ({
+            ...listing,
+            createdAt: listing.createdAt.toISOString() //converting the date and time component to a safer component
+        }))
+
+        //returning the safe listings
+        return safeListings
 
         
     } catch (error: any) {
