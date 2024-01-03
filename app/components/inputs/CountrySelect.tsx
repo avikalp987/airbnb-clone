@@ -9,6 +9,7 @@ export type CountrySelectValue={
     label: string,
     latlng: number[],
     region: string,
+    value: string,
 }
 
 //defining the props
