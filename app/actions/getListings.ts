@@ -1,12 +1,30 @@
 import prisma from "../libs/prismadb"
 
-export default async function getListings() {
+export interface IListingsParams {
+    userId?: string,
+}
+
+export default async function getListings(
+    params: IListingsParams
+) {
 
     //getting our listings according to the filters
     try {
+
+        //extract user id
+        const {userId} = params
+
+        //defining the querry
+        let query: any = {}
+
+        if(userId)
+        {
+            query.userId = userId
+        }
         
         //fetching all of the listings
         const listings = await prisma.listing.findMany({
+            where: query,
             orderBy: {
                 createdAt: "desc"
             }
