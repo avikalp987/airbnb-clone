@@ -80,7 +80,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                             />
 
                             <MenuItem 
-                                onClick={()=>{}}
+                                onClick={()=>router.push("/favorites")}
                                 label="My favorites"
                             />
 
